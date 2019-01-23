@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../img/favicon.png">
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="丁叔叔的博客">
+    <meta name="author" content="UncleDing">
+    <meta name="keywords" content="Uncle Ding">
+    <title>丁某人也有个圈子 --Jenkins ~ Send it to you🌹!</title>
+    <link rel="stylesheet" href="/css/Material_Icons.css">
+    <!-- <link rel="stylesheet" href="/css/font-awesome.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    
+        <link rel="stylesheet" href="/css/post.css">
+        
+            <link rel="stylesheet" href="/css/Prettify/tomorrow-night-eighties.min.css">
+        
+    
+</head>
+
+<body class=" sidebar-collapse">
+<nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
+    <div class="container">
+        <div class="navbar-translate">
+            <a class="navbar-brand" href="/">
+                Send it to you🌹!</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" href="/archives/">
+                                    archives
+                                </a>
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" href="/about/">
+                                    about
+                                </a>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://github.com/Dingzhaocheng/" target="_blank" data-original-title="See me here">
+                                    <i class="fa fa-github"></i>
+                                </a>
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://twitter.com/UncleDing1" target="_blank" data-original-title="See me here">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                        
+                    
+                </ul>
+            </div>
+    </div>
+</nav>
+    
+  <div class="page-header header-filter" data-parallax="true" style="background-image: url('../img/post_head.jpg')">
+    
+      <div class="container">
+        <h1 class="title text-center">丁某人也有个圈子 --Jenkins</h1>
+        <p class="text-center"><b>Saturday, January 19th 2019, 6:32 pm</b></p>
+      </div>
+    
+  </div>
+
+
+  <div class="main main-raised">
+    <div class="container">
+      <div class="section">
+        
+
+
+<div class="row">
+    <div class="col-md-7 offset-md-2">
+        <div class="post_content tocbot-content">
+            <h5 id="起因"><a href="#起因" class="headerlink" title="起因:"></a>起因:</h5><p> 　因公司要迭代官网,所以借着机会跟着公司大佬们涨了波知识,大概花了三天时间了解了一下Jenkins,一个自动化构建部署工具.学习过程是很崎岖的,充分体会到了什么叫像因式分解一样解决问题.一个问题变成若干个个分支,兜兜转转绕个圈,发现最优方案还是最初的想法.</p>
+<h5 id="经过"><a href="#经过" class="headerlink" title="经过:"></a>经过:</h5><p> 　对于Jenkins的话,个人理解不深,但是大概的一个流程我应该是了解了,我是将工具装在本地,对于Windows操作系统官网上有两种安装方式,一种是直接打的msi包,下载后直接安装到本地,会自动跳转到默认浏览器打开.另一种方案是下载.war文件,本地安装tomcat,将.war文件直接拖入webapps里,之后跑起Tomcat,输入<code>localhost:8080/Jenkins</code><br> 就可以自动安装Jinkins并运行服务,要说两者有什么区别的话,大概查阅了下资料,前者是作为Windows服务进行的,伴随着Windows开机而启动,而后这种方式则是寄宿于Tomcat容器中.这个无关紧要，重点主要是作为GitHub仓库和服务器之间的媒介,如何配置的相关问题.配置这里也不细说了,网上的资料还是比较齐全的,主要把其中几个坑点记述一下,防止以后再犯.</p>
+<ol>
+<li><p>　我所选取的方案是Jenkins安装在本地,通过账号密码连接GitHub仓库,通过ssh连接服务器,进行文件传输部署.所以对于本地连接GitHub的话,webhooks是行不通的,需要本地支持外网访问,所以我选择SCM定时轮询.除了内网穿透工具好像没什么好的解决方案.如果有好的解决方案的大佬可以留言告诉我.感激不尽.</p>
+</li>
+<li><p>　Linux 一定要有一些了解,要能够正确安装以及配置环境,否则在Jinkins上写脚本会比较坑.</p>
+</li>
+<li><p>SSH Publisher里面的Transfers里面如果设置了<code>**/*</code>的话,下面的路径一定要用绝对路径.</p>
+</li>
+</ol>
+<h5 id="结尾"><a href="#结尾" class="headerlink" title="结尾:"></a>结尾:</h5><p> 　剩下的基本上就没有太坑的了,就是个人理解问题了,其实挺简单的事情,我兜了一大圈,也算有个经验了吧.这个工具的应用场景来说的话,我简单想了一下,我的博客是hexo框架搭建的,本质上说就是node环境+GitPages,所以每次发布都要通过命令去更新,如果用Jenkins去作为Middle ware的话,我觉得要方便点的多,监测我的Git push,之后自动脚本运行更新博客.<br>       <code>我说过我会回来吧</code><br>       —-UncleDing</p>
+<p>　</p>
+
+        </div>
+        <br><br>
+        <div>
+            <p>
+                     
+                    <span class="badge badge-default">#&nbsp;Jenkins</span>
+                    &nbsp;
+                     
+                    <span class="badge badge-default">#&nbsp;Linux</span>
+                    &nbsp;
+                     
+                    <span class="badge badge-default">#&nbsp;自动化部署工具</span>
+                    &nbsp;
+                    
+            </p>
+        </div>
+    </div>
+    <!-- TOC -->
+    
+        <div class="col-md-3">
+            <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#起因"><span class="toc-text">起因:</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#经过"><span class="toc-text">经过:</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#结尾"><span class="toc-text">结尾:</span></a></li></ol>
+        </div>
+    
+</div>
+
+<!-- Comments -->
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+    
+        
+            <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    <script>               
+        var disqus_shortname = 'uncleding';
+        var disqus_config = function () {
+            this.page.url = 'https://uncleding.top/2019/01/19/浅谈Jenkins/'; 
+            this.page.identifier = '/2019/01/19/浅谈Jenkins/';
+        };
+        (function() { 
+            var d = document, s = d.createElement('script');
+            s.type = 'text/javascript';
+            s.src = '//'+disqus_shortname+'.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>                                
+</div>
+        
+    
+    </div>
+</div>
+      </div>
+    </div>
+  </div>
+
+
+<footer class="footer footer-default">
+        <div class="container">
+          <nav class="float-left">
+              <h3>你似无意穿堂风</h3>
+          </nav>
+          <div class="copyright float-right">
+            &copy;
+            <script>
+              document.write(new Date().getFullYear())
+            </script>&nbsp;<a href="#" target="_blank">Coffee✍</a>&nbsp;<i class="material-icons">favorite_border</i>
+            <a href="#">UncleDing</a>
+          </div>
+        </div>
+</footer>
+      <!--   Core JS Files   -->
+      <script src="/js/core/jquery.min.js"></script>
+      
+        <script src="/js/main.js"></script>
+       
+      <script src="/js/core/popper.min.js"></script>
+      <script src="/js/core/bootstrap-material-design.min.js"></script>
+      <script src="/js/plugins/moment.min.js"></script>
+      <!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+      <!-- <script src="/js/plugins/bootstrap-datetimepicker.js"></script> -->
+      <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+      <script src="/js/plugins/nouislider.min.js"></script>
+      <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
+      <script src="/js/material-kit.min.js?v=2.0.5"></script>
+      
+      
+        <script src="/js/plugins/prettify.js"></script>
+        <script>
+            $(window).on('load',function(){
+                $('pre').addClass('prettyprint linenums');
+                prettyPrint();
+            })
+        </script>
+        
+          
+        
+      
+</body>
+</html>

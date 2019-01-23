@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../img/favicon.png">
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="丁叔叔的博客">
+    <meta name="author" content="UncleDing">
+    <meta name="keywords" content="Uncle Ding">
+    <title>小记 ~ Send it to you🌹!</title>
+    <link rel="stylesheet" href="/css/Material_Icons.css">
+    <!-- <link rel="stylesheet" href="/css/font-awesome.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    
+        <link rel="stylesheet" href="/css/post.css">
+        
+            <link rel="stylesheet" href="/css/Prettify/tomorrow-night-eighties.min.css">
+        
+    
+</head>
+
+<body class=" sidebar-collapse">
+<nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
+    <div class="container">
+        <div class="navbar-translate">
+            <a class="navbar-brand" href="/">
+                Send it to you🌹!</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" href="/archives/">
+                                    archives
+                                </a>
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" href="/about/">
+                                    about
+                                </a>
+                            </li>
+                        
+                    
+                    
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://github.com/Dingzhaocheng/" target="_blank" data-original-title="See me here">
+                                    <i class="fa fa-github"></i>
+                                </a>
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://twitter.com/UncleDing1" target="_blank" data-original-title="See me here">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                        
+                    
+                </ul>
+            </div>
+    </div>
+</nav>
+    
+  <div class="page-header header-filter" data-parallax="true" style="background-image: url('../img/post_head.jpg')">
+    
+      <div class="container">
+        <h1 class="title text-center">小记</h1>
+        <p class="text-center"><b>Thursday, November 8th 2018, 3:11 pm</b></p>
+      </div>
+    
+  </div>
+
+
+  <div class="main main-raised">
+    <div class="container">
+      <div class="section">
+        
+
+
+<div class="row">
+    <div class="col-md-7 offset-md-2">
+        <div class="post_content tocbot-content">
+            <h4 id="最近在写一个简单的H5-很惭愧磨叽了好几天才有个大概得样子-今天看到一个成熟大佬的相同作品-感悟很大-随手记下几点"><a href="#最近在写一个简单的H5-很惭愧磨叽了好几天才有个大概得样子-今天看到一个成熟大佬的相同作品-感悟很大-随手记下几点" class="headerlink" title="最近在写一个简单的H5,很惭愧磨叽了好几天才有个大概得样子,今天看到一个成熟大佬的相同作品,感悟很大,随手记下几点."></a>最近在写一个简单的H5,很惭愧磨叽了好几天才有个大概得样子,今天看到一个成熟大佬的相同作品,感悟很大,随手记下几点.</h4><h5 id="ES6语法对于代码的语义化和结构条理简洁优雅很有帮助"><a href="#ES6语法对于代码的语义化和结构条理简洁优雅很有帮助" class="headerlink" title="ES6语法对于代码的语义化和结构条理简洁优雅很有帮助"></a>ES6语法对于代码的语义化和结构条理简洁优雅很有帮助</h5><ul>
+<li><p>何时用const何时用let</p>
+<blockquote>
+<p>个人而言当你使用const时,证明该变量不会再被重新赋值,对于代码的可读性而言,让人简单明了;而let声明则针对于那些会被重新赋值的变量.</p>
+</blockquote>
+</li>
+<li><p>解构赋值和扩展运算符</p>
+<blockquote>
+<p>接口设计无疑会决定你的解决方案,但是在接收多段level的数据的时候,对象的解构赋值无疑是一个充满幸福感的选择方案;</p>
+<p>对于遍历一个集合,如果其结果是一个集合的话,灵活运用扩展运算符进行解构,代码档次会提高不少</p>
+</blockquote>
+</li>
+<li><p>getBoundingClientRect()和offset</p>
+<blockquote>
+<p>getBoundingClientRect()相比offset兼容性较好,mounted挂载中自执行该事件,也要在destroyed中销毁该事件</p>
+</blockquote>
+</li>
+<li><p>for… of …</p>
+<blockquote>
+<p>相较于其他遍历方法,for… of…很强大,能够遍历任何具备iterator方法的集合.for…in…更适合遍历对象;可以为类数组对象添加<code>symbol.iterator</code>方法:<code>jQuery.prototype</code></p>
+<p><code>[Symbol.iterator] = Array.prototype</code></p>
+<p><code>[Symbol.iterator];</code></p>
+</blockquote>
+</li>
+<li><p>postCSS</p>
+<blockquote>
+<p>postCSS作为预处理平台,能够将css打乱成AST抽象语法树,</p>
+<p>通过不同的插件可以实现转换,Scss+postCSS是一个不错的方案.</p>
+</blockquote>
+<p><code>从此你从南走,我从北过.</code> –UncleDing</p>
+</li>
+</ul>
+
+        </div>
+        <br><br>
+        <div>
+            <p>
+                     
+                    <span class="badge badge-default">#&nbsp;前端</span>
+                    &nbsp;
+                     
+                    <span class="badge badge-default">#&nbsp;Node.js</span>
+                    &nbsp;
+                     
+                    <span class="badge badge-default">#&nbsp;Markdown</span>
+                    &nbsp;
+                    
+            </p>
+        </div>
+    </div>
+    <!-- TOC -->
+    
+        <div class="col-md-3">
+            <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#最近在写一个简单的H5-很惭愧磨叽了好几天才有个大概得样子-今天看到一个成熟大佬的相同作品-感悟很大-随手记下几点"><span class="toc-text">最近在写一个简单的H5,很惭愧磨叽了好几天才有个大概得样子,今天看到一个成熟大佬的相同作品,感悟很大,随手记下几点.</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#ES6语法对于代码的语义化和结构条理简洁优雅很有帮助"><span class="toc-text">ES6语法对于代码的语义化和结构条理简洁优雅很有帮助</span></a></li></ol></li></ol>
+        </div>
+    
+</div>
+
+<!-- Comments -->
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+    
+        
+            <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    <script>               
+        var disqus_shortname = 'uncleding';
+        var disqus_config = function () {
+            this.page.url = 'https://uncleding.top/2018/11/08/小记/'; 
+            this.page.identifier = '/2018/11/08/小记/';
+        };
+        (function() { 
+            var d = document, s = d.createElement('script');
+            s.type = 'text/javascript';
+            s.src = '//'+disqus_shortname+'.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>                                
+</div>
+        
+    
+    </div>
+</div>
+      </div>
+    </div>
+  </div>
+
+
+<footer class="footer footer-default">
+        <div class="container">
+          <nav class="float-left">
+              <h3>你似无意穿堂风</h3>
+          </nav>
+          <div class="copyright float-right">
+            &copy;
+            <script>
+              document.write(new Date().getFullYear())
+            </script>&nbsp;<a href="#" target="_blank">Coffee✍</a>&nbsp;<i class="material-icons">favorite_border</i>
+            <a href="#">UncleDing</a>
+          </div>
+        </div>
+</footer>
+      <!--   Core JS Files   -->
+      <script src="/js/core/jquery.min.js"></script>
+      
+        <script src="/js/main.js"></script>
+       
+      <script src="/js/core/popper.min.js"></script>
+      <script src="/js/core/bootstrap-material-design.min.js"></script>
+      <script src="/js/plugins/moment.min.js"></script>
+      <!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+      <!-- <script src="/js/plugins/bootstrap-datetimepicker.js"></script> -->
+      <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+      <script src="/js/plugins/nouislider.min.js"></script>
+      <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
+      <script src="/js/material-kit.min.js?v=2.0.5"></script>
+      
+      
+        <script src="/js/plugins/prettify.js"></script>
+        <script>
+            $(window).on('load',function(){
+                $('pre').addClass('prettyprint linenums');
+                prettyPrint();
+            })
+        </script>
+        
+          
+        
+      
+</body>
+</html>
