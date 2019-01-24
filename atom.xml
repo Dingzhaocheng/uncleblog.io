@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://uncleding.top/"/>
-  <updated>2019-01-23T12:24:38.420Z</updated>
+  <updated>2019-01-24T02:04:14.762Z</updated>
   <id>https://uncleding.top/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://uncleding.top/2019/01/23/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80%E7%90%86%E8%A7%A3/"/>
     <id>https://uncleding.top/2019/01/23/响应式布局理解/</id>
     <published>2019-01-23T10:56:22.000Z</published>
-    <updated>2019-01-23T12:24:38.420Z</updated>
+    <updated>2019-01-24T02:04:14.762Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="最近认真的看了下响应式布局-有些小感想-在这里记述一下吧"><a href="#最近认真的看了下响应式布局-有些小感想-在这里记述一下吧" class="headerlink" title="最近认真的看了下响应式布局,有些小感想,在这里记述一下吧."></a>最近认真的看了下响应式布局,有些小感想,在这里记述一下吧.</h4><h4 id="一丶国内的学习环境还是挺差的"><a href="#一丶国内的学习环境还是挺差的" class="headerlink" title="一丶国内的学习环境还是挺差的"></a>一丶国内的学习环境还是挺差的</h4><p>　虽然看起来挺不合题意得,但是事情的结果挺值的我吐槽一下的,我之前是一个初学者,哪怕到现在也是,也算上看过许多的知识IP了,但是很多属于下水道产品,哪怕我自己现在也在做这种事情,所以我觉得还是留给自己看吧,以后的都不叫Blog,叫Notes、小记.当然相当多的博客还是很不错的,很是值得我去学习,去膜拜.但是有些重复率太高了,一篇文章无数人搬,所以这也是我脱离某度去谷歌的原因.其次就是国内网站叫w3school,它属于一个落后版本,在2011年的时候出现了一个这个网站的迭代版本,叫w3schools <a href="https://www.w3schools.com" target="_blank" rel="noopener">w3schools</a>,然而经过我的验证并不能在国内访问,看看国内能够访问的w3school的装修,再看看w3schools的装潢,一个精装,一个毛坯.这样的例子比比皆是,所以我觉得能够找个梯子还是挺好的,谷歌搜索中文搜不到答案换英文一定可以,有几个固定问答网站的IP也是很不错的.哪怕是看看ins,twitter也是不错的,今天感受了一下来自Facebook的PWA,感觉很流畅,感觉应该不会逊色于原生.</p><h4 id="二、聊聊响应式吧"><a href="#二、聊聊响应式吧" class="headerlink" title="二、聊聊响应式吧"></a>二、聊聊响应式吧</h4><p>　我觉得适配一直是一个无论在哪个终端设备平台上不会少的话题,其实响应式在我看来就是一种屏幕适配方案,我之前比较自满了,我一直认为就是写媒体查询就可以了,但是来公司工作之后我才发现事情并不是这么简单,没办法,<code>成年的雄狮只有学会捕猎才能得到狮群的认可</code>,自己好好看呗.正好最近有一个小demo,需要做一些移动端的适配,我当时为了追求速度果断选择了bootstrap,因为网页也不是特别追求细节,而且时间成本应该会很低.这样浑浑噩噩的做完之后,我在偶然浏览网站的时候发现了一个让我很懊恼的事情,这个网站就是w3schools,我看到他的Mobile layout的一个section,其实他在对于bootstrap栅格系统进行分析,其实无非就是将网页的一段水平长度划分为12列,按百分比进行赋值,在页面元素绑定响应类名,之后通过媒体查询针对于不同设备的分辨率打上几个不同的断点,之后就可以实现一个基本的响应式布局,我这里有一个经典三栏式布局的案例,可以一起看一下.  </p><p><div align="center"><br><img src="/2019/01/23/响应式布局理解/../响应式布局理解/first.png" width="600" height="300" alt="pc端" title="pc端" align="center"><br>　<em>这是pc端的布局样式</em><br></div> </p><p><div align="center"><br>　<br><img src="/2019/01/23/响应式布局理解/../响应式布局理解/mobile.png" width="auto" height="500" alt="分辨率<600" title="分辨率<600"><br> 这是屏幕&lt;600px的样式<br></div><br>　　<br>　　其实这是一个很简单的问题,我当时还引用了bootstrap,其实对于一个想要从事前端的人来说不是很应该,当然bootstrap很巧妙,因为我的业务决定了只需要他的栅格系统,手动写css样式也代码量也很少,讲道理来说很不应该,算是涨个经验吧  </p><h4 id="三、总结一下"><a href="#三、总结一下" class="headerlink" title="三、总结一下"></a>三、总结一下</h4><p>　其实我在工作后有了一些对于前端工作的感觉，其实对于基础的业务，还是要多练习比较好，精巧的东西还是要建立在基础之上么，慢慢来吧，路上的坑应该还不少．　　<br>　<code>你对自己要求高一点,你才有资格要求你别人</code>–Uncleding </p>]]></content>
+    <content type="html"><![CDATA[<h4 id="最近认真的看了下响应式布局-有些小感想-在这里记述一下吧"><a href="#最近认真的看了下响应式布局-有些小感想-在这里记述一下吧" class="headerlink" title="最近认真的看了下响应式布局,有些小感想,在这里记述一下吧."></a>最近认真的看了下响应式布局,有些小感想,在这里记述一下吧.</h4><h4 id="一丶国内的学习环境还是挺差的"><a href="#一丶国内的学习环境还是挺差的" class="headerlink" title="一丶国内的学习环境还是挺差的"></a>一丶国内的学习环境还是挺差的</h4><p>　虽然看起来挺不合题意得,但是事情的结果挺值的我吐槽一下的,我之前是一个初学者,哪怕到现在也是,也算上看过许多的知识IP了,但是很多属于下水道产品,哪怕我自己现在也在做这种事情,所以我觉得还是留给自己看吧,以后的都不叫Blog,叫Notes、小记.当然相当多的博客还是很不错的,很是值得我去学习,去膜拜.但是有些重复率太高了,一篇文章无数人搬,所以这也是我脱离某度去谷歌的原因.其次就是国内网站叫w3school,它属于一个落后版本,在2011年的时候出现了一个这个网站的迭代版本,叫w3schools <a href="https://www.w3schools.com" target="_blank" rel="noopener">w3schools</a>,然而经过我的验证并不能在国内访问,看看国内能够访问的w3school的装修,再看看w3schools的装潢,一个精装,一个毛坯.这样的例子比比皆是,所以我觉得能够找个梯子还是挺好的,谷歌搜索中文搜不到答案换英文一定可以,有几个固定问答网站的IP也是很不错的.哪怕是看看ins,twitter也是不错的,今天感受了一下来自Facebook的PWA,感觉很流畅,感觉应该不会逊色于原生.</p><h4 id="二、聊聊响应式吧"><a href="#二、聊聊响应式吧" class="headerlink" title="二、聊聊响应式吧"></a>二、聊聊响应式吧</h4><p>　我觉得适配一直是一个无论在哪个终端设备平台上不会少的话题,其实响应式在我看来就是一种屏幕适配方案,我之前比较自满了,我一直认为就是写媒体查询就可以了,但是来公司工作之后我才发现事情并不是这么简单,没办法,<code>成年的雄狮只有学会捕猎才能得到狮群的认可</code>,自己好好看呗.正好最近有一个小demo,需要做一些移动端的适配,我当时为了追求速度果断选择了bootstrap,因为网页也不是特别追求细节,而且时间成本应该会很低.这样浑浑噩噩的做完之后,我在偶然浏览网站的时候发现了一个让我很懊恼的事情,这个网站就是w3schools,我看到他的Mobile layout的一个section,其实他在对于bootstrap栅格系统进行分析,其实无非就是将网页的一段水平长度划分为12列,按百分比进行赋值,在页面元素绑定响应类名,之后通过媒体查询针对于不同设备的分辨率打上几个不同的断点,之后就可以实现一个基本的响应式布局,我这里有一个经典三栏式布局的案例,可以一起看一下.  </p><p><div align="center"><br><img src="/2019/01/23/响应式布局理解/../响应式布局理解/first.png" width="600" height="300" alt="pc端" title="pc端" align="center"><br>　<em>这是pc端的布局样式</em><br></div> </p><p><div align="center"><br>　<br><img src="/2019/01/23/响应式布局理解/../响应式布局理解/mobile.png" width="300" height="200" alt="分辨率<600" title="分辨率<600"><br> 这是屏幕&lt;600px的样式<br></div><br>　　<br>　　其实这是一个很简单的问题,我当时还引用了bootstrap,其实对于一个想要从事前端的人来说不是很应该,当然bootstrap很巧妙,因为我的业务决定了只需要他的栅格系统,手动写css样式也代码量也很少,讲道理来说很不应该,算是涨个经验吧  </p><h4 id="三、总结一下"><a href="#三、总结一下" class="headerlink" title="三、总结一下"></a>三、总结一下</h4><p>　其实我在工作后有了一些对于前端工作的感觉，其实对于基础的业务，还是要多练习比较好，精巧的东西还是要建立在基础之上么，慢慢来吧，路上的坑应该还不少．　　<br>　<code>你对自己要求高一点,你才有资格要求别人</code>–Uncleding </p>]]></content>
     
     <summary type="html">
     
@@ -149,8 +149,6 @@
       <category term="技术分享" scheme="https://uncleding.top/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
     
-      <category term="Node.js" scheme="https://uncleding.top/tags/Node-js/"/>
-    
       <category term="Github" scheme="https://uncleding.top/tags/Github/"/>
     
       <category term="Hexo" scheme="https://uncleding.top/tags/Hexo/"/>
@@ -158,6 +156,8 @@
       <category term="Javascript" scheme="https://uncleding.top/tags/Javascript/"/>
     
       <category term="npm" scheme="https://uncleding.top/tags/npm/"/>
+    
+      <category term="Node.js" scheme="https://uncleding.top/tags/Node-js/"/>
     
   </entry>
   
