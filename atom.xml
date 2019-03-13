@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://uncleding.top/"/>
-  <updated>2019-03-13T14:34:20.457Z</updated>
+  <updated>2019-03-13T14:37:43.392Z</updated>
   <id>https://uncleding.top/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Responsive for Web</title>
-    <link href="https://uncleding.top/2019/01/23/Go%20%20&amp;&amp;%20Javascript/"/>
-    <id>https://uncleding.top/2019/01/23/Go  &amp;&amp; Javascript/</id>
-    <published>2019-01-23T10:56:22.000Z</published>
-    <updated>2019-03-13T14:34:20.457Z</updated>
+    <title>GOlang &amp;&amp; Javascript</title>
+    <link href="https://uncleding.top/2019/03/13/Go%20%20&amp;&amp;%20Javascript/"/>
+    <id>https://uncleding.top/2019/03/13/Go  &amp;&amp; Javascript/</id>
+    <published>2019-03-13T14:26:22.000Z</published>
+    <updated>2019-03-13T14:37:43.392Z</updated>
     
     <content type="html"><![CDATA[<h4 id="有趣"><a href="#有趣" class="headerlink" title="有趣"></a>有趣</h4><p>　　最近在家一直等待工作的机会,一直下决心要正经的学一门服务端语言,正好有了机会.之前很早便简单了解了一下Golang这门语言,给我的第一印象就是很有意思,靠着严格的语法来区分公有私有属性.他的格式化日期是最奇葩的,居然把诞生日也就是2006-01-02 15:04:05作为必要参数,like this:<code>time.Now().Format(&quot;2006-01-02 15:04:05&quot;)</code> 吉祥物也很油意思,Gordon,也不知道哪个大神居然能看出来这是一只囊地鼠.好了,说了一堆没用的.标题叫Golang和Javascript,这两者我都只能说是了解,可能作为一个前端接触Javascript比较多一些,但是我觉得如果要将整个网站架构变成一张图布在无论说是你的大脑里也好,还是电脑里也罢,一定要去了解服务端,了解网络,了解计算机,这也是为什么我要去学服务端语言的原因,前端要想写的更好,你知道我怎样去调试接口,获取数据不行,你要去了解前后端分离,为什么要分,好处是什么,接口联调为什么会出问题.我认为最成熟的前端应该不仅仅写好自己的网页,也能告诉服务端给你什么样的数据以至于你能够提高自己的效率,这是我在工作的时候明白的道理.那么Golang和Javascript有哪些我认为相似的地方,下面来说一说:</p><h4 id="相似"><a href="#相似" class="headerlink" title="相似"></a>相似</h4><p>　　首先比较相似的地方就是类型声明这里,变量声明用var,ES2015标准出现之前,Javascript类型声明使用var字段.而在Golang里变量声明使用的也是此字段.常量声明这里用的是const,ES2015对于运行中值不会发生改变的量或者可以理解为常量用const来修饰,Golang中用const来声明常量,这个不用多说,具体代码如下:  </p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*JS常量声明*/</span></span><br><span class="line"><span class="keyword">const</span> a= <span class="string">"Alen"</span>;</span><br><span class="line"><span class="comment">/*Before ECMAScript 2015*/</span></span><br><span class="line"><span class="keyword">var</span> b= <span class="number">12321</span>;</span><br><span class="line"><span class="comment">/*Golang 常量声明*/</span></span><br><span class="line"><span class="keyword">const</span> a= <span class="string">"Dennis"</span>;</span><br><span class="line"><span class="comment">/*Golang 变量声明*/</span></span><br><span class="line"><span class="keyword">var</span> a= <span class="string">"Dennis"</span>;</span><br></pre></td></tr></table></figure><p>　　好,如果说上面说的内容你对于两门语言看一眼就能够知道的话,那下面的就很有意思了,两者虽然语言类型不同,一个是弱类型,动态类型语言,一个是编译型,静态类型语言,但是忽略ECMAscript 2015标准的话,两者都支持系统自动推断类型.比如说:</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*js*/</span></span><br><span class="line">a= <span class="number">20</span>;</span><br><span class="line"><span class="keyword">type</span> of(a);<span class="comment">/*Number*/</span></span><br><span class="line"><span class="comment">/*Golang*/</span></span><br><span class="line">c := <span class="number">100</span></span><br><span class="line">fmt.Println(reflect.Typeof(c))<span class="comment">/*int*/</span></span><br></pre></td></tr></table></figure><p>　　接着往下面看,Javascript中常用的遍历就是for循环了,比如说:  </p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i= <span class="number">0</span>;i&lt; <span class="number">10</span>;i++)<span class="built_in">console</span>.log(i);</span><br></pre></td></tr></table></figure><p>　　这里因为循环体就一条语句，所以我们省略了大括号，但是Ｇｏ就不一样了，他不需要小括号，而且他的while循环也是用for作为关键字执行的  </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for key,value := range somemap&#123;/*do something*/&#125;</span><br></pre></td></tr></table></figure><p>　　接下来说一条我觉得很烦的一条,我们都知道Javascript没有像Java这样传统OOP语言类的概念,那么Javascript如何实现类继承呢,这里就涉及到了原型的概念,当你使用某一个属性或者方法的时候,他会找你的父级,你父级的父级,一直找到终极对象,这样形成了一条链式结构,我们叫他原型链.  </p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> bar= <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">bar.prototype.drink = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="built_in">console</span>.log(<span class="string">"..."</span>)&#125;</span><br></pre></td></tr></table></figure><p>　　而Ｇo中的方法跟这种写法很像,像在哪里我们来看:  </p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*结构体*/</span></span><br><span class="line"><span class="keyword">type</span> Foo <span class="keyword">struct</span> &#123;</span><br><span class="line">    x <span class="keyword">int</span></span><br><span class="line">    y <span class="keyword">int</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*方法*/</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(foo *Foo)</span> <span class="title">Print</span><span class="params">()</span></span> &#123;</span><br><span class="line">    fmt.Println(<span class="string">"foo"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>　　其实就是方法挂到了结构体上.</p><p>　　我们知道Js对于数组操作有slice方法,用来返回指定位置间一段数组,Go中也有slice,叫做数组切片  </p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">foo := []int&#123;<span class="number">1</span>, <span class="number">2</span>&#125;<span class="comment">/*go*/</span></span><br><span class="line"><span class="keyword">let</span> foo = [<span class="string">'hello'</span>, <span class="string">'world'</span>]<span class="comment">/*JS*/</span></span><br></pre></td></tr></table></figure><h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>　　我人为最适合前端开发人员学的后台语言,除了Node.js这个运行环境以外,当属Go,补充一下,开始没有好好介绍Go,Go出身名门,谷歌亲儿子,父亲是多位计算机届大佬,不是发明语言的,就是发明编译器的,语言特性:天生支持高并发处理.处理速度快,无限几近于底层c语言.而且作为去年程序员最想学的语言之最.生态也很好,还有一个docker,基于go语言开发的,在微服务领域混的风生水起.再者我要提一个人,一个很牛的人,Node.js开发服务端有几个很牛的框架,其中有两个最最常用稳定的是他写的,一个是koa.js,一个是Express.js,这个人叫TJ大神.他在若干年前退出Node领域,转投了Go语言阵营.说起这个让我想到Node之父瑞恩达尔也是在我大二的时候自主研发了Deno,基于Typescript的,这个名字就是意思为推翻Node的一切.好了,天才总是让人难以臆测的,像我这种蠢材只能一点点去看了.感兴趣,你们可以去看看Golang.</p><p><code>人对什么事物感知越敏锐,越想能够有一个相同的人去交流,一种精神上的孤独感.</code> –UncleDing</p>]]></content>
     
@@ -37,7 +37,9 @@
       <category term="论道" scheme="https://uncleding.top/categories/%E8%AE%BA%E9%81%93/"/>
     
     
-      <category term="响应式" scheme="https://uncleding.top/tags/%E5%93%8D%E5%BA%94%E5%BC%8F/"/>
+      <category term="Golang" scheme="https://uncleding.top/tags/Golang/"/>
+    
+      <category term="Javascript" scheme="https://uncleding.top/tags/Javascript/"/>
     
   </entry>
   
@@ -116,9 +118,9 @@
       <category term="论道 小记" scheme="https://uncleding.top/categories/%E8%AE%BA%E9%81%93-%E5%B0%8F%E8%AE%B0/"/>
     
     
-      <category term="Node.js" scheme="https://uncleding.top/tags/Node-js/"/>
-    
       <category term="前端" scheme="https://uncleding.top/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="Node.js" scheme="https://uncleding.top/tags/Node-js/"/>
     
       <category term="Markdown" scheme="https://uncleding.top/tags/Markdown/"/>
     
@@ -145,9 +147,9 @@
       <category term="论道" scheme="https://uncleding.top/categories/%E8%AE%BA%E9%81%93/"/>
     
     
-      <category term="Node.js" scheme="https://uncleding.top/tags/Node-js/"/>
-    
       <category term="前端" scheme="https://uncleding.top/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="Node.js" scheme="https://uncleding.top/tags/Node-js/"/>
     
       <category term="Markdown" scheme="https://uncleding.top/tags/Markdown/"/>
     
@@ -174,11 +176,11 @@
       <category term="技术分享" scheme="https://uncleding.top/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
     
     
+      <category term="Javascript" scheme="https://uncleding.top/tags/Javascript/"/>
+    
       <category term="Github" scheme="https://uncleding.top/tags/Github/"/>
     
       <category term="Hexo" scheme="https://uncleding.top/tags/Hexo/"/>
-    
-      <category term="Javascript" scheme="https://uncleding.top/tags/Javascript/"/>
     
       <category term="npm" scheme="https://uncleding.top/tags/npm/"/>
     
